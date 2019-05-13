@@ -1,0 +1,66 @@
+----------------------------------------------------
+Author: Siddharth Nahar
+Entry No : 2016csb1043
+Use : Design Document how Files are Created and more
+----------------------------------------------------
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+I have created two Algorithms:
+
+*Algorithm 1 : Self-Defined ArrayList and Stack using inbuilt function and having some additional properties.
+
+*Hierarchy :  
+            1.Generic interface called Lists is implemented by both class
+            
+ Interface is as Specified : 
+--------------------------------------------------------------------------------------
+
+ public interface Lists<T extends Comparable<T> >{
+
+
+     public void pushElement(T element);    //Add an object to list
+     public void popElement();      //Remove from stack,Queue
+     public void popElement(int index);     //Remove from particular index in array
+     public int sizeOfList();
+     public boolean searchElement(T obj);   //Searches for objects
+     public T top();
+     public T getMax();           //Returns Max of list
+}
+
+--------------------------------------------------------------------------------------
+
+2. All functionalities are utilised in both classes.
+3.Instantition of ArrayList and Stack is prevented by generic Shield1 class.
+   getObjList() is fnction to get Lists object.
+4.Any changes in algorithms will not change clients code and automatically gets updated in client side
+ 
+4. Test1 is test file to demonstrate for Algorithm 1 .Shields the code and also tries some Lists operation.
+
+--------------------------------------------------------------------------------------------------------
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+*Algorithm 2 : Matrix manipulation for matrix multiplication and Determinant of matrix.
+
+*Hierarchy : 
+             1. Basic template called Matrix interface as below :
+--------------------------------------------------------------------------------------------------------
+
+public interface MatrixInterface{
+
+       public void matInit();  //Returns mat obj after initialization
+       public Matrix matMultiply(Matrix obj) throws Exception;  //Matrix multiplication
+       public double Determinant() throws Exception;    //Returns Determinant of matrix
+       public void Display();    //Displaying contents of matrix
+}
+
+--------------------------------------------------------------------------------------------------------
+
+2. Square Matrix is extended from basic Matrix class
+3. Identity Matrix is extended from Square Matrix class
+4. Instantition of ArrayList and Stack is prevented by generic Shield2 class.
+   getObjList() is fnction to get Lists object.
+5. Any changes in algorithms will not change clients code and automatically gets updated in client side
+ 
+6. Test2 is test file to demonstrate for Algorithm 2 .Shields the code and also tries some Lists operation.
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
